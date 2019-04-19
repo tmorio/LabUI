@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>UI Demo</title>
+		<link rel="stylesheet" type="text/css" href="style.css?test=1">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+        </head>
+	<body>
+		<div class="content">
+			<div class="container">
+                                <div class="gridControll">
+					<div class="itemBox"><canvas id="Chart1"></canvas></div>
+					<div class="itemBox"><canvas id="Chart2"></canvas></div>
+					<div class="itemBox"><canvas id="Chart3"></canvas></div>
+					<div class="boxMap"><div id="statusMap"></div></div>
+					<div class="itemBox"><canvas id="Chart4"></canvas></div>
+					<div class="itemBox"><canvas id="Chart5"></canvas></div>
+					<div class="itemBox"><canvas id="Chart6"></canvas></div>
+					<div class="itemBox"><canvas id="Chart7"></canvas></div>
+					<div class="itemBox"><canvas id="Chart8"></canvas></div>
+					<div class="itemBox"><canvas id="Chart9"></canvas></div>
+					<div class="itemBox"><canvas id="Chart10"></canvas></div>
+					<div class="itemBox"><canvas id="Chart11"></canvas></div>
+					<div class="itemBox"><canvas id="Chart12"></canvas></div>
+					<div class="itemBox">System Info</div>
+                                </div>
+			</div>
+		</div>
+
+        </body>
+	<script>
+	var ctx1 = document.getElementById("Chart1");
+	var ctx2 = document.getElementById("Chart2");
+	var ctx3 = document.getElementById("Chart3");
+	var ctx4 = document.getElementById("Chart4");
+	var ctx5 = document.getElementById("Chart5");
+	var ctx6 = document.getElementById("Chart6");
+	var ctx7 = document.getElementById("Chart7");
+	var ctx8 = document.getElementById("Chart8");
+	var ctx9 = document.getElementById("Chart9");
+	var ctx10 = document.getElementById("Chart10");
+	var ctx11 = document.getElementById("Chart11");
+	var ctx12 = document.getElementById("Chart12");
+  var myLineChart = new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [10, 10, 10, 10, 3, 34, 10],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+	display: true,
+        text: 'City 1'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx2, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [10, 10, 11, 30, 6, 8, 10],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 2'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx3, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [10, 10, 10, 10, 10, 10, 10],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 3'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx4, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [34, 6, 32, 8, 10, 10, 10],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 4'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx5, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [34, 37, 1, 10, 10, 10, 10],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 5'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx6, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [10, 10, 35, 2, 10, 10, 10],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 6'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx7, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [10, 10, 10, 1, 21, 10, 10],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 7'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx8, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [34, 37, 35, 34, 35, 34, 25],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 8'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx9, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [10, 37, 70, 34, 35, 8, 10],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 9'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx10, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [2, 10, 10, 10, 10, 10, 25],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 10'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx11, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [10, 37, 10, 10, 10, 10, 10],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 11'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+        }
+    }
+  });
+  var myLineChart = new Chart(ctx12, {
+    type: 'line',
+    data: {
+      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      datasets: [
+        {
+          label: 'Level',
+          data: [10, 9, 11, 10, 10, 10, 10],
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        }
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      title: {
+        display: true,
+        text: 'City 12'
+      },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                    max: 100
+                }
+            }]
+	}
+    }
+  });
+
+
+			var map;
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('statusMap'), {
+					center: {lat: 36.3799224, lng: 139.7318094},
+					zoom: 16,
+					mapTypeControl: false,
+					fullscreenControl:false,
+					streetViewControl: false
+				});
+			}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_PqH61wln7u5GE0ycuekW1ePbjTfcSJE&callback=initMap"></script>
+
+</html>

@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;
+}
+
+canvas{
+    position: relative;
+    height:100%;
+    width:100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content {
+    height: 100vh;
+    overflow: auto;
+}
+
+.gridControll{
+    display: grid;
+    gap: 0.5vh;
+    padding: 5px;
+    grid-template-columns:1.5fr 1.5fr 1.5fr 2fr;
+    grid-template-rows: auto auto auto auto;
+}
+
+.itemBox {
+    background: #fff;
+    height: calc(100vh/4 - 2vh);;
+    padding: 5px;
+    border-radius: 3px;
+    border: 2px solid #ccc;
+}
+
+.boxMap {
+    background: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    border: 2px solid #ccc;
+    grid-column: 4 / 5;
+    grid-row: 1 / 4;
+}
+
+#statusMap{
+    height: 100%;
+    widht:100%;
+}
