@@ -14,7 +14,6 @@
 					<div class="itemBox"><canvas id="Chart1"></canvas></div>
 					<div class="itemBox"><canvas id="Chart2"></canvas></div>
 					<div class="itemBox"><canvas id="Chart3"></canvas></div>
-					<div class="boxMap"><div id="statusMap"></div></div>
 					<div class="itemBox"><canvas id="Chart4"></canvas></div>
 					<div class="itemBox"><canvas id="Chart5"></canvas></div>
 					<div class="itemBox"><canvas id="Chart6"></canvas></div>
@@ -24,13 +23,22 @@
 					<div class="itemBox"><canvas id="Chart10"></canvas></div>
 					<div class="itemBox"><canvas id="Chart11"></canvas></div>
 					<div class="itemBox"><canvas id="Chart12"></canvas></div>
-					<div class="itemBox">System Info</div>
+					<div class="boxMap"><div id="statusMap"></div></div>
+					<div class="infoBox"><div id="infoTime"></div><br>システム状況<br>正常稼働中</div>
                                 </div>
 			</div>
 		</div>
 
         </body>
 	<script>
+    nowTime();
+    function nowTime(){
+        var now = new Date();
+        document.getElementById("infoTime").innerHTML = "現在時刻<br>" + now.toLocaleString();
+    }
+    setInterval('nowTime()',1000);
+
+
 	var ctx1 = document.getElementById("Chart1");
 	var ctx2 = document.getElementById("Chart2");
 	var ctx3 = document.getElementById("Chart3");
@@ -46,13 +54,14 @@
   var myLineChart = new Chart(ctx1, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+      labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [10, 10, 10, 10, 3, 34, 10],
+          data: [50, 50, 50, 50, 3, 74, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 , 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -62,6 +71,9 @@
       title: {
 	display: true,
         text: 'City 1'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -76,13 +88,14 @@
   var myLineChart = new Chart(ctx2, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [10, 10, 11, 30, 6, 8, 10],
+          data: [ 50, 50, 50, 50, 50, 50, 50, 51, 80, 6, 34, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -92,6 +105,9 @@
       title: {
         display: true,
         text: 'City 2'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -106,13 +122,14 @@
   var myLineChart = new Chart(ctx3, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [10, 10, 10, 10, 10, 10, 10],
+          data: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -122,6 +139,9 @@
       title: {
         display: true,
         text: 'City 3'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -136,13 +156,14 @@
   var myLineChart = new Chart(ctx4, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [34, 6, 32, 8, 10, 10, 10],
+          data: [50, 50, 50, 50, 50, 50, 32, 73, 8, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -152,6 +173,9 @@
       title: {
         display: true,
         text: 'City 4'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -166,13 +190,14 @@
   var myLineChart = new Chart(ctx5, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [34, 37, 1, 10, 10, 10, 10],
+          data: [50, 50, 50, 50, 50, 50, 37, 26, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -182,6 +207,9 @@
       title: {
         display: true,
         text: 'City 5'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -196,13 +224,14 @@
   var myLineChart = new Chart(ctx6, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [10, 10, 35, 2, 10, 10, 10],
+          data: [50, 50, 79, 2, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -212,6 +241,9 @@
       title: {
         display: true,
         text: 'City 6'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -226,13 +258,14 @@
   var myLineChart = new Chart(ctx7, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [10, 10, 10, 1, 21, 10, 10],
+          data: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 1, 21, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -242,6 +275,9 @@
       title: {
         display: true,
         text: 'City 7'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -256,13 +292,14 @@
   var myLineChart = new Chart(ctx8, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [34, 37, 35, 34, 35, 34, 25],
+          data: [50, 37, 56, 78, 35, 54, 55, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -272,6 +309,9 @@
       title: {
         display: true,
         text: 'City 8'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -286,13 +326,14 @@
   var myLineChart = new Chart(ctx9, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [10, 37, 70, 34, 35, 8, 10],
+          data: [50, 37, 70, 34, 35, 48, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -302,6 +343,9 @@
       title: {
         display: true,
         text: 'City 9'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -316,13 +360,14 @@
   var myLineChart = new Chart(ctx10, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [2, 10, 10, 10, 10, 10, 25],
+          data: [50, 50, 50, 50, 50, 2, 50, 50, 50, 50, 50, 65, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -332,6 +377,9 @@
       title: {
         display: true,
         text: 'City 10'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -346,13 +394,14 @@
   var myLineChart = new Chart(ctx11, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
-          label: 'Level',
-          data: [10, 37, 10, 10, 10, 10, 10],
+	  label: 'Level',
+          data: [ 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 87, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -362,6 +411,9 @@
       title: {
         display: true,
         text: 'City 11'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -376,13 +428,14 @@
   var myLineChart = new Chart(ctx12, {
     type: 'line',
     data: {
-      labels: ['0:00', '4:00', '8:00', '12:00', '16:00', '20:00'],
+     labels: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'],
       datasets: [
         {
           label: 'Level',
-          data: [10, 9, 11, 10, 10, 10, 10],
+          data: [ 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 9, 81, 50, 50, 50, 50, 50, 50, 50, 50, 50],
           borderColor: "rgba(255,0,0,1)",
-          backgroundColor: "rgba(0,0,0,0)"
+          backgroundColor: "rgba(0,0,0,0)",
+	  lineTension: 0
         }
       ],
     },
@@ -392,6 +445,9 @@
       title: {
         display: true,
         text: 'City 12'
+      },
+      legend: {
+       display: false
       },
         scales: {
             yAxes: [{
@@ -406,14 +462,35 @@
 
 
 			var map;
+			var marker = [];
+			var pinData = [ {name:'TEST01',lat:36.3799267,lng:139.7318147},
+					{name:'TEST02',lat:36.3815853,lng:139.7316963},
+					{name:'TEST03',lat:36.3783463,lng:139.7308913},
+					{name:'TEST04',lat:36.3791413,lng:139.7334343},
+					{name:'TEST05',lat:36.3808684,lng:139.7351222},
+					{name:'TEST06',lat:36.3827512,lng:139.7323320},
+					{name:'TEST07',lat:36.3809843,lng:139.7275473},
+					{name:'TEST08',lat:36.3792563,lng:139.7277193},
+					{name:'TEST09',lat:36.3766993,lng:139.7273863},
+					{name:'TEST10',lat:36.3766133,lng:139.7346283},
+					{name:'TEST11',lat:36.3801113,lng:139.7359053},
+					{name:'TEST12',lat:36.3822273,lng:139.7354123}];
 			function initMap() {
 				map = new google.maps.Map(document.getElementById('statusMap'), {
 					center: {lat: 36.3799224, lng: 139.7318094},
 					zoom: 16,
 					mapTypeControl: false,
 					fullscreenControl:false,
-					streetViewControl: false
+					streetViewControl: false,
+					zoomControl: false
 				});
+				for (var loopCount = 0; loopCount < pinData.length; loopCount++) {
+					markerArea = {lat: pinData[loopCount]['lat'], lng: pinData[loopCount]['lng']};
+					marker[loopCount] = new google.maps.Marker({
+						position: markerArea,
+						map: map
+					});
+				}
 			}
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_PqH61wln7u5GE0ycuekW1ePbjTfcSJE&callback=initMap"></script>
